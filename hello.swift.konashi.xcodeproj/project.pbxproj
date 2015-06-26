@@ -208,10 +208,10 @@
 		35985DA21B3D714D0087F3B3 = {
 			isa = PBXGroup;
 			children = (
+				35985DC01B3D72A20087F3B3 /* README.md */,
 				35649EEC1B3D8A0A00F98EF3 /* Header.h */,
 				35649E9F1B3D78E100F98EF3 /* Konashi */,
 				35649E9D1B3D77EE00F98EF3 /* CoreBluetooth.framework */,
-				35985DC01B3D72A20087F3B3 /* README.md */,
 				35985DAD1B3D714D0087F3B3 /* hello.swift.konashi */,
 				35985DAC1B3D714D0087F3B3 /* Products */,
 			);

@@ -8,18 +8,37 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
+
+
+    // MARK: - Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // Konashi
+        Konashi.initialize()
+        Konashi.addObserver(self, selector: "ready", name: KonashiEventReadyToUseNotification)
+
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
+    // MARK: - Action
+
+    @IBAction func findKonashiButtonDidTouchUpInside(sender: AnyObject) {
+        Konashi.find()
     }
 
+
+    func ready() {
+        print(NSDate().description)
+
+        Konashi.pwmMode(KonashiDigitalIOPin.LED2, mode: KonashiPWMMode.EnableLED)
+        Konashi.pwmPeriod(KonashiDigitalIOPin.LED2, period: 1_000_000)
+        Konashi.pwmDuty(KonashiDigitalIOPin.LED2, duty: 500_000)
+        Konashi.pwmMode(KonashiDigitalIOPin.LED2, mode: KonashiPWMMode.Enable)
+    }
 
 }
 
