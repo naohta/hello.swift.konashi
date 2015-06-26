@@ -24,9 +24,6 @@
 		35649EE01B3D78E100F98EF3 /* KNSPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = 35649EC51B3D78E100F98EF3 /* KNSPeripheral.m */; };
 		35649EE11B3D78E100F98EF3 /* Konashi.m in Sources */ = {isa = PBXBuildFile; fileRef = 35649EC81B3D78E100F98EF3 /* Konashi.m */; };
 		35649EE21B3D78E100F98EF3 /* KonashiUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 35649ECA1B3D78E100F98EF3 /* KonashiUtils.m */; };
-		35649EE31B3D78E100F98EF3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 35649ECF1B3D78E100F98EF3 /* InfoPlist.strings */; };
-		35649EE41B3D78E100F98EF3 /* KonashiTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35649ED11B3D78E100F98EF3 /* KonashiTests-Info.plist */; };
-		35649EE51B3D78E100F98EF3 /* KonashiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35649ED21B3D78E100F98EF3 /* KonashiTests.m */; };
 		35985DAF1B3D714D0087F3B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35985DAE1B3D714D0087F3B3 /* AppDelegate.swift */; };
 		35985DB11B3D714D0087F3B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35985DB01B3D714D0087F3B3 /* ViewController.swift */; };
 		35985DB41B3D714D0087F3B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35985DB21B3D714D0087F3B3 /* Main.storyboard */; };
@@ -41,13 +38,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = E91E548E19C8F2750071D7C9;
 			remoteInfo = Konashi;
-		};
-		35649EEA1B3D78E100F98EF3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 35649ECB1B3D78E100F98EF3 /* Konashi.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E91E549E19C8F2750071D7C9;
-			remoteInfo = KonashiTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -91,9 +81,6 @@
 		35649EC91B3D78E100F98EF3 /* KonashiUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KonashiUtils.h; sourceTree = "<group>"; };
 		35649ECA1B3D78E100F98EF3 /* KonashiUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KonashiUtils.m; sourceTree = "<group>"; };
 		35649ECB1B3D78E100F98EF3 /* Konashi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Konashi.xcodeproj; sourceTree = "<group>"; };
-		35649ED01B3D78E100F98EF3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		35649ED11B3D78E100F98EF3 /* KonashiTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "KonashiTests-Info.plist"; sourceTree = "<group>"; };
-		35649ED21B3D78E100F98EF3 /* KonashiTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KonashiTests.m; sourceTree = "<group>"; };
 		35649EEC1B3D8A0A00F98EF3 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		35985DAB1B3D714D0087F3B3 /* hello.swift.konashi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hello.swift.konashi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35985DAE1B3D714D0087F3B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,7 +109,6 @@
 			children = (
 				35649EA01B3D78E100F98EF3 /* Konashi */,
 				35649ECB1B3D78E100F98EF3 /* Konashi.xcodeproj */,
-				35649ECE1B3D78E100F98EF3 /* KonashiTests */,
 			);
 			path = Konashi;
 			sourceTree = "<group>";
@@ -215,19 +201,8 @@
 			isa = PBXGroup;
 			children = (
 				35649EE91B3D78E100F98EF3 /* libKonashi.a */,
-				35649EEB1B3D78E100F98EF3 /* KonashiTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		35649ECE1B3D78E100F98EF3 /* KonashiTests */ = {
-			isa = PBXGroup;
-			children = (
-				35649ECF1B3D78E100F98EF3 /* InfoPlist.strings */,
-				35649ED11B3D78E100F98EF3 /* KonashiTests-Info.plist */,
-				35649ED21B3D78E100F98EF3 /* KonashiTests.m */,
-			);
-			path = KonashiTests;
 			sourceTree = "<group>";
 		};
 		35985DA21B3D714D0087F3B3 = {
@@ -329,13 +304,6 @@
 			remoteRef = 35649EE81B3D78E100F98EF3 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		35649EEB1B3D78E100F98EF3 /* KonashiTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = KonashiTests.xctest;
-			remoteRef = 35649EEA1B3D78E100F98EF3 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -344,9 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35985DB91B3D714D0087F3B3 /* LaunchScreen.storyboard in Resources */,
-				35649EE31B3D78E100F98EF3 /* InfoPlist.strings in Resources */,
 				35985DB61B3D714D0087F3B3 /* Assets.xcassets in Resources */,
-				35649EE41B3D78E100F98EF3 /* KonashiTests-Info.plist in Resources */,
 				35985DB41B3D714D0087F3B3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,7 +339,6 @@
 				35985DB11B3D714D0087F3B3 /* ViewController.swift in Sources */,
 				35649EDD1B3D78E100F98EF3 /* KNSPeripheralBaseImpl.m in Sources */,
 				35649EDE1B3D78E100F98EF3 /* KNSCentralManager.m in Sources */,
-				35649EE51B3D78E100F98EF3 /* KonashiTests.m in Sources */,
 				35649ED91B3D78E100F98EF3 /* Konashi+Grove.m in Sources */,
 				35649ED31B3D78E100F98EF3 /* CBPeripheral+Konashi.m in Sources */,
 				35985DAF1B3D714D0087F3B3 /* AppDelegate.swift in Sources */,
@@ -383,14 +348,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		35649ECF1B3D78E100F98EF3 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				35649ED01B3D78E100F98EF3 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		35985DB21B3D714D0087F3B3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
