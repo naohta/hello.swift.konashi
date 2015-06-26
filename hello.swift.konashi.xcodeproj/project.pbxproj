@@ -94,6 +94,7 @@
 		35649ED01B3D78E100F98EF3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		35649ED11B3D78E100F98EF3 /* KonashiTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "KonashiTests-Info.plist"; sourceTree = "<group>"; };
 		35649ED21B3D78E100F98EF3 /* KonashiTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KonashiTests.m; sourceTree = "<group>"; };
+		35649EEC1B3D8A0A00F98EF3 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		35985DAB1B3D714D0087F3B3 /* hello.swift.konashi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hello.swift.konashi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35985DAE1B3D714D0087F3B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35985DB01B3D714D0087F3B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -232,6 +233,7 @@
 		35985DA21B3D714D0087F3B3 = {
 			isa = PBXGroup;
 			children = (
+				35649EEC1B3D8A0A00F98EF3 /* Header.h */,
 				35649E9F1B3D78E100F98EF3 /* Konashi */,
 				35649E9D1B3D77EE00F98EF3 /* CoreBluetooth.framework */,
 				35985DC01B3D72A20087F3B3 /* README.md */,
@@ -500,6 +502,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.naohta.hello-swift-konashi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Header.h;
 			};
 			name = Debug;
 		};
@@ -512,6 +515,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.naohta.hello-swift-konashi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Header.h;
 			};
 			name = Release;
 		};
