@@ -2,20 +2,12 @@ hello.swift.konashi
 ===================
 
 
-Article
--------
+Documents
+---------
 
-- http://konashi.ux-xu.com/getting_started/
-
-
-Other sites
------------
-
+- http://konashi.ux-xu.com/documents/
 - http://konashi.ux-xu.com/appledoc/index.html
 
-- https://github.com/naohta/konashi-ios-sdk
-- http://konashi.ux-xu.com/documents/#specs-supportDevice
-- https://store.macnica.co.jp/library/96045
 
 
 Bridging Header File with objc 
