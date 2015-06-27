@@ -17,10 +17,10 @@ Bridging Header File with objc
 
     - https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/BuildingCocoaApps/MixandMatch.html
 
-        - Add `Header.h`
-        - Write like `#import "Konashi.h"` things in `Header.h`
+        - Add `Swift-Objc.h`
+        - Write like `#import "Konashi.h"` things in `Swift-Objc.h`
         - Project root -> Targets -> Build Settings -> All
-            -> Swift Compiler - Code Generation -> Objective-C Bridging Header -> WRITE `Header.h` THERE!
+            -> Swift Compiler - Code Generation -> Objective-C Bridging Header -> WRITE `Swift-Objc.h` THERE!
 
 - An Apple's article
 

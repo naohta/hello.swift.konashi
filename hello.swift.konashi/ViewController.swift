@@ -19,7 +19,7 @@ class ViewController: UIViewController {
 
         // Konashi
         Konashi.initialize()
-        Konashi.addObserver(self, selector: "ready", name: KonashiEventReadyToUseNotification)
+        Konashi.addObserver(self, selector: "konashiReady", name: KonashiEventReadyToUseNotification)
 
     }
 
@@ -33,7 +33,7 @@ class ViewController: UIViewController {
 
     // MARK: - Event
 
-    func ready() {
+    func konashiReady() {
 
         print("\(NSDate().description) Peripheral:\(Konashi.peripheralName())  is ready.")
 
