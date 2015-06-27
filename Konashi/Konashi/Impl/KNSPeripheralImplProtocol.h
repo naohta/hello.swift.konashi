@@ -60,6 +60,7 @@
 @optional
 - (CBPeripheralState)state;
 - (BOOL)isReady;
+- (NSString *)findName;
 
 - (KonashiResult)writeValuePioSetting;
 - (KonashiResult)writeValuePioPullup;

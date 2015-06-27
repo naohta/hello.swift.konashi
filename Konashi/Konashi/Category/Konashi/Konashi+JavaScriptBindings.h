@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Akira Matsuda. All rights reserved.
 //
 
-#import "Konashi.h"
 #import <UIKit/UIKit.h>
+#import "Konashi.h"
 #import <JavaScriptCore/JavaScriptCore.h>
 
 @interface KNSJavaScriptVirtualMachine : NSObject

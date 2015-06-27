@@ -1,31 +1,18 @@
 //
-//  KNSCentralManager+UI.m
-//  Konashi
+//  Konashi+UI.m
+//  GettingStarted
 //
-//  Created by Akira Matsuda on 12/4/14.
-//  Copyright (c) 2014 Akira Matsuda. All rights reserved.
+//  Created by Akira Matsuda on 9/2/14.
+//  Copyright (c) 2014 Yukai Engineering. All rights reserved.
 //
 
-#import "KNSCentralManager+UI.h"
-#import "KonashiConstant.h"
+#import "Konashi+UI.h"
+#import "KonashiUtils.h"
 
-@implementation KNSCentralManager (UI)
+@implementation Konashi (UI)
 
-- (void)showPeripherals
+- (void)showModulePicker
 {
-	[self discover:^(CBPeripheral *peripheral, BOOL *stop) {
-	} completionBlock:^(NSSet *peripherals, BOOL timeout) {
-		if ([peripherals count] > 0) {
-			[self showModulePickerWithPeripherals:[self.peripherals allObjects]];
-		}
-	} timeoutInterval:KonashiFindTimeoutInterval];
-}
-
-static NSArray *peripheralArray;
-
-- (void)showModulePickerWithPeripherals:(NSArray *)peripherals
-{
-	peripheralArray = peripherals;
 	UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Select Module" delegate:self cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:nil];
 	for (CBPeripheral *p in peripherals) {
 		NSString *name = p.name;
@@ -43,26 +30,23 @@ static NSArray *peripheralArray;
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-	NSInteger selectedIndex = buttonIndex;
 	if (buttonIndex == [actionSheet cancelButtonIndex]) {
-		selectedIndex = -1;
 		[self actionSheetCancel:actionSheet];
 	}
 	else {
-		CBPeripheral *peripheral = peripheralArray[buttonIndex];
-		[[KNSCentralManager sharedInstance] connectWithPeripheral:peripheral];
+		CBPeripheral *peripheral = peripherals[buttonIndex];
+		[cm connectPeripheral:peripheral options:nil];
 #ifdef KONASHI_DEBUG
 		KNS_LOG(@"Connecting %@(UUID: %@)", peripheral.name, peripheral.identifier.UUIDString);
 #endif
 	}
 	
-	[[NSNotificationCenter defaultCenter] postNotificationName:KonashiEventPeripheralSelectorDidSelectNotification object:@(selectedIndex)];
+	[[NSNotificationCenter defaultCenter] postNotificationName:KonashiEventPeripheralSelectorDidSelectNotification object:@(buttonIndex)];
 }
 
 - (void)actionSheetCancel:(UIActionSheet *)actionSheet
 {
 	[[NSNotificationCenter defaultCenter] postNotificationName:KonashiEventPeripheralSelectorDismissedNotification object:nil];
 }
-
 
 @end
